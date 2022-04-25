@@ -75,3 +75,15 @@ stuart_build -c OvmfPkg/PlatformCI/PlatformBuild.py TOOL_CHAIN_TAG=VS2019 --Flas
 **Pick up**
 
 1. this guid 'EFI_FIRMWARE_FILE_SYSTEM2_GUID' is the first FV.
+
+
+
+* Configure a build with edk-platforms together *
+1. make sure EDK2 properly vesrioned tag download
+2. configure this env variable `EDK_TOOLS_PATH` path to properly folder 
+3. edksetup.bat rebuild in edk2 folder
+4. visit edk-platforms\intel folder
+5. type 'python build_bios.py -h', it tellls more options to build a platform BIOS
+6. type 'python build_bios.py -l', it lists support platform 
+7. type 'python build_bios.py -p xxx -t VS2019' to start a build with VS2019 toolchain.
+
