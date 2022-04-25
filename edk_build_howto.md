@@ -87,3 +87,26 @@ stuart_build -c OvmfPkg/PlatformCI/PlatformBuild.py TOOL_CHAIN_TAG=VS2019 --Flas
 6. type 'python build_bios.py -l', it lists support platform 
 7. type 'python build_bios.py -p xxx -t VS2019' to start a build with VS2019 toolchain.
 
+** If encountering some errors that cannot be identified easy, then you can **
+ex.
+...
+...
+c:\edk_workspace\fsp;c:\edk_workspace\edk2;c:\edk_workspace;c:\edk_workspace
+EDK_TOOLS_PATH   = c:\edk_workspace\edk2\basetools
+CONF_PATH        = c:\edk_workspace\conf
+PYTHON_COMMAND   = py -3
+build: : warning: Tool chain [VS2019] is not defined
+
+
+build.py...
+ : error 4000: Not available
+	[VS2019] not defined. No toolchain available for build!
+
+
+- Failed -
+Build end time: 15:10:36, Apr.25 2022
+Build total time: 00:00:01
+
+
+to resolve above issue, python build_bios.py --cleanall to force clean all, <-- it will cleans something files.
+  
