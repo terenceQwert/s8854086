@@ -108,5 +108,5 @@ Build end time: 15:10:36, Apr.25 2022
 Build total time: 00:00:01
 
 
-to resolve above issue, python build_bios.py --cleanall to force clean all, <-- it will cleans something files.
+To resolve above issue, python build_bios.py --cleanall to force clean all, <-- it will cleans something files.
   
